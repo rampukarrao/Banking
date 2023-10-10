@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+      <title>OUR Bank</title>
+      <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/signUp_css.css" />
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+  <!-- start header Section-->
+  
+  </div>
+  <img src="images/banking1.jpg">
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Signup</header>
+        <form action="#">
+          <input type="text" placeholder="Full name" required />
+          <input type="text" placeholder="Email address" required maxlength = "30" />
+          <input type="text" placeholder="Mobile Number" required maxlength = "10"/>
+          <input type="password" placeholder="Password" required maxlength = "12"/>
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck" >I accept all terms & conditions</label>
+          </div>
+          <input type="submit" value="Signup" />
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>Login</header>
+        <form action="#">
+          <input type="text" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+          <a href="#">Forgot password?</a>
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+
+      <script>
+        const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
+      </script>
+    </section>
+  </body>
+</html>
